@@ -1,9 +1,5 @@
 <?php
-	require_once("../bdconfig.php");
-	$optEmail = $wxh;
-	$payAmount = $_GET['payAmount'];
-		$memo = "订单产品：".$_GET['bdproduct']."，姓名（会员名）：".$_GET['bdname']."，手机：".$_GET['bdmob']."，订单编号：".$_GET['out_trade_no'];
-	$smsNo = $_GET['bdmob'];
+	
 ?>
 <html>
 <head>
@@ -70,29 +66,7 @@
 <div align="center" style="font-family: '微软雅黑'; font-size: 18px; color: #071BF5; width:100%; " >请用手机打开微信APP，扫一扫上面的二维码图案，<br>免加好友向本站付款<span style="color: #F50707"><?php echo $payAmount ?></span>元。<br>付款前请确保收款微信号是<span style="color: #F50707"><?php echo $optEmail ?></span>，建议付款说明中填写亲提交订单时填写的手机号(QQ号)码“<span style="color: #F50707"><?php echo $smsNo ?></span>”，方便核对订单信息，谢谢！<br>
   <span style="color: #0DA406">附亲提交的部分订单信息：（有问题直接联系QQ151619143）</span></div>
 
-<div id="bdok">
-    <ul>
-        <li>
-            <span class="l">订单号：</span>
-          <span class="r"><?php echo $_GET['out_trade_no']; ?></span>
-        </li>
-        <li>
-            <span class="l">订购产品：</span>
-            <span class="r"><?php echo $_GET['bdproduct']; ?></span>
-        </li>
 
-        
-        <li>
-            <span class="l">收货人（会员名）：</span>
-            <span class="r"><?php echo $_GET['bdname']; ?></span>
-        </li>
-        <li>
-            <span class="l">手机号(QQ号)码：</span>
-            <span class="r"><?php echo $_GET['bdmob']; ?></span>
-        </li> 
-
-    </ul>
-</div>
 <p align="center"><a href='<?php echo $_SERVER['HTTP_REFERER']?>' title="返回"><img src="../template/images/bdgo.gif" width="100%" alt="返回" /></a></p>
 
 </body>
